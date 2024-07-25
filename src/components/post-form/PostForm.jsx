@@ -73,7 +73,7 @@ export default function PostForm({ post }) {
       }
     });
 
-    return () => subscription.unsubscribe(); //to unsubscribe the subscription :: to avoid memory leak
+    return () => subscription.unsubscribe();
   }, [watch, slugTransform, setValue]);
 
   return (

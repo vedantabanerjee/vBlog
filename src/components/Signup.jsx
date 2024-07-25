@@ -1,40 +1,25 @@
-/**
- * @fileoverview Signup component
- * @description The Signup component is a form that allows users to create an account.
- * It includes input fields for the user's name, email, and password.
- * It uses the useForm hook from react-hook-form to handle form validation.
- * It uses the authService.createAccount method to create a new account.
- * It uses the useDispatch hook from react-redux to dispatch the login action.
- * It uses the useNavigate hook from react-router-dom to navigate to the home page after successful login.
- * It uses the Link component from react-router-dom to link to the login page.
- */
-
 import React, { useState } from "react";
 import authService from "../appwrite/auth";
 import { Link, useNavigate } from "react-router-dom";
 import { login } from "../store/authSlice";
-import { Button, Input, Logo } from "./index";
+import { Button, Input, Logo } from "./index.js";
 import { useDispatch } from "react-redux";
 import { useForm } from "react-hook-form";
 
 function Signup() {
   const navigate = useNavigate();
-  const dispatch = useDispatch();
   const [error, setError] = useState("");
+  const dispatch = useDispatch();
   const { register, handleSubmit } = useForm();
 
-  const signup = async (data) => {
+  const create = async (data) => {
     setError("");
     try {
       const userData = await authService.createAccount(data);
       if (userData) {
         const userData = await authService.getCurrentUser();
-        if (userData) {
-          dispatch(login(userData));
-          navigate("/");
-        }
-      } else {
-        setError("An error occurred. Please try again.");
+        if (userData) dispatch(login(userData));
+        navigate("/");
       }
     } catch (error) {
       setError(error.message);
@@ -63,8 +48,6 @@ function Signup() {
             Sign In
           </Link>
         </p>
-
-        //display error message if there is an error
         {error && <p className="text-red-600 mt-8 text-center">{error}</p>}
 
         <form onSubmit={handleSubmit(create)}>

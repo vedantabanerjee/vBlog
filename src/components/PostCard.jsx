@@ -1,8 +1,8 @@
 /**
  * !!The PostCard component is a simple card component that displays the title and featured image of a post!!
- * In this component, we are displaying the title and the featured image of a post. 
- * We are also using the Link component from react-router-dom to link to the post page. 
- * The featured image is displayed using the appwriteService.getFilePreview function, 
+ * In this component, we are displaying the title and the featured image of a post.
+ * We are also using the Link component from react-router-dom to link to the post page.
+ * The featured image is displayed using the appwriteService.getFilePreview function,
  * which generates a URL for the file based on the file ID.
  */
 import React from "react";
