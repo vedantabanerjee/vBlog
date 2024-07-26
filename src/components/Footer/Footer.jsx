@@ -9,8 +9,8 @@ function Footer() {
         <div className="-m-6 flex flex-wrap">
           <div className="w-full p-6 md:w-1/2 lg:w-5/12">
             <div className="flex h-full flex-col justify-between">
-              <div className="mb-4 inline-flex items-center">
-                <Logo width="450px" />
+              <div className="mb-4 pl-20 inline-flex items-center">
+                <Logo width="300px" />
               </div>
               <div>
                 <p className="text-sm text-[#d22f6b]">
@@ -41,22 +41,6 @@ function Footer() {
                     Pricing
                   </Link>
                 </li>
-                <li className="mb-4">
-                  <Link
-                    className=" text-base font-medium text-[#d22f6b] hover:text-white"
-                    to="/"
-                  >
-                    Affiliate Program
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    className=" text-base font-medium text-[#d22f6b] hover:text-white"
-                    to="/"
-                  >
-                    Press Kit
-                  </Link>
-                </li>
               </ul>
             </div>
           </div>
@@ -71,14 +55,6 @@ function Footer() {
                     className=" text-base font-medium text-[#d22f6b] hover:text-white"
                     to="/"
                   >
-                    Account
-                  </Link>
-                </li>
-                <li className="mb-4">
-                  <Link
-                    className=" text-base font-medium text-[#d22f6b] hover:text-white"
-                    to="/"
-                  >
                     Help
                   </Link>
                 </li>
@@ -88,14 +64,6 @@ function Footer() {
                     to="/"
                   >
                     Contact Us
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    className=" text-base font-medium text-[#d22f6b] hover:text-white"
-                    to="/"
-                  >
-                    Customer Support
                   </Link>
                 </li>
               </ul>
@@ -121,14 +89,6 @@ function Footer() {
                     to="/"
                   >
                     Privacy Policy
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    className=" text-base font-medium text-[#d22f6b] hover:text-white"
-                    to="/"
-                  >
-                    Licensing
                   </Link>
                 </li>
               </ul>

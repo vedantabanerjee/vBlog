@@ -39,28 +39,21 @@ function Signup() {
         <h2 className="text-center text-2xl font-bold leading-tight">
           Sign up to create account
         </h2>
-        <p className="mt-2 text-center text-base text-black/60">
-          Already have an account?&nbsp;
-          <Link
-            to="/login"
-            className="font-medium text-primary transition-all duration-200 hover:underline"
-          >
-            Sign In
-          </Link>
-        </p>
+
         {error && <p className="text-red-600 mt-8 text-center">{error}</p>}
 
+        <p className="pt-5">Enter your credentials</p>
         <form onSubmit={handleSubmit(create)}>
-          <div className="space-y-5">
+          <div className="space-y-5 pt-5 text-left">
             <Input
-              label="Full Name: "
+              //label="Full Name: "
               placeholder="Enter your full name"
               {...register("name", {
                 required: true,
               })}
             />
             <Input
-              label="Email: "
+              //label="Email: "
               placeholder="Enter your email"
               type="email"
               {...register("email", {
@@ -73,7 +66,7 @@ function Signup() {
               })}
             />
             <Input
-              label="Password: "
+              //label="Password: "
               type="password"
               placeholder="Enter your password"
               {...register("password", {
@@ -84,6 +77,15 @@ function Signup() {
               Create Account
             </Button>
           </div>
+          <p className="mt-5 text-center text-base text-black/60">
+            Already have an account?&nbsp;
+            <Link
+              to="/login"
+              className="font-medium text-primary transition-all duration-200 hover:underline"
+            >
+              Sign In
+            </Link>
+          </p>
         </form>
       </div>
     </div>

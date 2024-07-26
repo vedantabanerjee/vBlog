@@ -6,8 +6,8 @@
  * which generates a URL for the file based on the file ID.
  */
 import React from "react";
-import service from "../appwrite/config";
 import { Link } from "react-router-dom";
+import service from "../appwrite/config";
 
 function PostCard({ $id, title, featuredImage }) {
   return (
